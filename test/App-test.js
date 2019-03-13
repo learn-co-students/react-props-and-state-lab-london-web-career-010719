@@ -83,7 +83,7 @@ describe('<App />', () => {
         .props()
         .onAdoptPet(trident.id);
 
-      expect(wrapper.state().pets).to.deep.equal([{ ...trident, isAdopted: true }]);
+      expect(wrapper.state().pets.find(p => p.id === trident.id)).to.deep.equal({ ...trident, isAdopted: true });
     });
   });
 });
