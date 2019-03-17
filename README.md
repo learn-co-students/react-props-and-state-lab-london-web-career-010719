@@ -16,9 +16,7 @@ this lab, we'll be working on a front-end for an animal shelter. Sadly, there
 still are way too many cute pets without any owners. Let's help them out by
 creating a UI in React!
 
-We **strongly** recommend completing this lab using Behavior Driven Development
-(BDD)––test the functionality in the browser **before** running the tests.
-You'll have a much better time seeing the results in the browser.
+np.
 
 Call `npm i && npm start` to run this project in your browser
 
