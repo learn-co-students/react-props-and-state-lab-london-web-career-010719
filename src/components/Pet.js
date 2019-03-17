@@ -2,7 +2,6 @@ import React from "react";
 
 class Pet extends React.Component {
   handleClick = pet => {
-    pet.isAdopted = true;
     this.props.onAdoptPet(pet);
   };
 
@@ -29,7 +28,7 @@ class Pet extends React.Component {
             <button className="ui disabled button">Already adopted</button>
           ) : (
             <button
-              onClick={() => this.handleClick(this.props.pet)}
+              onClick={() => this.handleClick(id)}
               className="ui primary button"
             >
               Adopt pet

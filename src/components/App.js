@@ -35,10 +35,19 @@ class App extends React.Component {
     this.setState({ filters: { type: filter } });
   };
 
-  updateAdopted = pet => {
-    // this.setState(pet);
-    console.log(pet.name, pet.isAdopted);
+  updateAdopted = petId => {
+    const pets = this.state.pets.map(petObj => {
+      return petObj.id === petId ? { ...petObj, isAdopted: true } : petObj;
+    });
+    this.setState({ pets });
   };
+
+  // onAdoptPet = petId => {
+  //   const pets = this.state.pets.map(p => {
+  //     return p.id === petId ? { ...p, isAdopted: true } : p;
+  //   });
+  //   this.setState({ pets });
+  // };
 
   render() {
     return (
